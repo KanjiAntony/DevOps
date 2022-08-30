@@ -4,4 +4,4 @@
 
 Check it here: [Import sql]
 
-[Import sql]: (/Docker/Import%20From%20SQL)
+[Import sql]: (../Docker/Import%20From%20SQL)
