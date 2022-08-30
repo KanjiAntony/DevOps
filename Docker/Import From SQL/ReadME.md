@@ -1,15 +1,15 @@
 # Import sql file residing in local machine to a mysql docker container
 
-#Requirements
+# Requirements
 * Docker installed
 
-#Configuration file
+# Configuration file
 To download our mysql image and run a container, we will use docker compose yaml file.
 Below is a sample file
 
 ![sample_docker_compose_image]
 
-#1. Start our docker container
+# 1. Start our docker container
 From the compose file, we will pull an image from the public repository to our local machine
 
 Command to run our compose file :
@@ -18,7 +18,7 @@ Command to run our compose file :
 
 ![start_our_docker_containers_image]
 
-#2. Check our networks, volumes and view sql file inside our mysql container
+# 2. Check our networks, volumes and view sql file inside our mysql container
 If we were to containerize our application that will have access to our mysql container, then we must ensure they are on the same network and we can define in our compose file.
 Volume on the other hand will provide persistence of our data. It is more like a backup area on our local machine or remote servers.
 Volumes will help us maintain our data even after restarting a container.
@@ -44,9 +44,9 @@ Volumes will help us maintain our data even after restarting a container.
 Once we are the container's interactive shell, we can navigate to our volume location which we specified in our compose file
 i.e <code>cd /home</code> and the you can see the sql file which was backed up from our local machine.
 
-#3. Create our database and import our sql file using two methods
+# 3. Create our database and import our sql file using two methods
 
-#a.) Method 1
+# a.) Method 1
 
 After creating our database, we can use the database and import tables using the command <code>SOURCE /home/backup.sql</code>
 
@@ -56,7 +56,7 @@ Method 1 Tables
 
 ![show_tables_imported_image]
 
-#b.) Method 2
+# b.) Method 2
 
 Having our known database e.g sql_compose_another, inside the container's interactive shell, we can run the command below to import sql tables to that database
 
