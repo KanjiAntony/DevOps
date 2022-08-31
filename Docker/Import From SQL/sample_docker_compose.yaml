@@ -3,7 +3,7 @@ services:
  mysqldatabase: # name of our service, NOTE: it can be anything you name it
    image: mysql:8.0 # pull from docker public repository if it is not available in your local machine
    ports:
-    - 3360:3360 # the ports in the format PORT_WE_EXPOSE:PORT_OF_APPLICATION_IN_CONTAINER
+    - 3306:3306 # the ports in the format PORT_WE_EXPOSE:PORT_OF_APPLICATION_IN_CONTAINER
    environment:
     - MYSQL_ROOT_PASSWORD=password #these are the default environments, check https://hub.docker.com/_/mysql/ on allowed environment variables
    networks:
